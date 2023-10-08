@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <getopt.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 #include "funciones.h"
 #include "funciones.c"
 

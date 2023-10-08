@@ -1,8 +1,11 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-int calculoEnergiaDepositada();
+double calculoEnergiaDepositada(int cantidad_celdas, int celda_impactada,
+                                int posicion_celda_actual, int energia_potencial);
 
-int leerArchivo(char *archivo_entrada);
+double * calculoEnergiaDepositadaCeldas(particulas *particulas, int cantidad_celdas);
+
+int leerArchivo(char *archivo_entrada);/*/
