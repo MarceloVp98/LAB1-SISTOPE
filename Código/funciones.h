@@ -1,11 +1,6 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <math.h>
-
-typedef struct particula
-{
-    int posicion_impacto;
-    int energia;
-} particulas;
 
 /*
 ENTRADA: total_celdas(int) -> cantidad total de celdas del material.
@@ -37,6 +32,15 @@ SALIDA:  posicion + 1(int) -> posicion de la celda con la mayor energia dentro d
 DESCRIPCION: Funcion que busca la celda con la mayor energia dentro del arrelo del celdas.
 */  
 int celdaMayorEnergia(double *energia_celdas, int total_celdas);
+
+/*
+ENTRADA: energia_celdas(double *) -> arreglo que contiene la energia total de cada celda del material.
+         celda_con_mayor_energia(int) -> posicion de la celda con mayor energia dentro del arreglo.
+         total_celdas(int) -> cantidad total de celdas del material.
+SALIDA:  vacio(void).
+DESCRIPCION: Funcion que imprime un grafico normalizado del las energias de cada celda.
+*/ 
+void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_mayor_energia);
 
 /*
 ENTRADA: nombre_archivo_entrada(char *) -> nombre del archivo a leer.
