@@ -73,6 +73,7 @@ void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_may
     for (int i = 0; i < total_celdas; ++i)
     {
         printf("%d  %f |", i, energia_celdas[i]);
+        //Se calcula la cantidad de O a imprimir segun la energia de la celda.
         cantidad_o = ((energia_celdas[i] / mayor_energia) * 100) / 2;
         for (double j = 0.0; j < cantidad_o; ++j)
         {
