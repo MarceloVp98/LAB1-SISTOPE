@@ -3,6 +3,8 @@
         "funciones.h": "c",
         "getopt.h": "c",
         "stdio.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "math.h": "c",
+        "stdlib.h": "c"
     }
 }
