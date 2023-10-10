@@ -46,7 +46,8 @@ void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_may
 ENTRADA: nombre_archivo_entrada(char *) -> nombre del archivo a leer.
          nombre_archivo_salida(char *) -> nombre del archivo a escribir.
          total_celdas(int) -> cantidad total de celdas del material.
+         imprimir(int) -> indica si se debe imprimir o no el grafico.
 SALIDA:  vacio(void).
 DESCRIPCION: Funcion que realiza la lectura y escritura de archivos.
 */  
-void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, int total_celdas);
+void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, int total_celdas, int imprimir);

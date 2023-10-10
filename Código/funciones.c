@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <math.h>
 
 typedef struct particula
@@ -73,7 +72,7 @@ void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_may
     for (int i = 0; i < total_celdas; ++i)
     {
         printf("%d  %f |", i, energia_celdas[i]);
-        //Se calcula la cantidad de O a imprimir segun la energia de la celda.
+        // Se calcula la cantidad de O a imprimir segun la energia de la celda.
         cantidad_o = ((energia_celdas[i] / mayor_energia) * 100) / 2;
         for (double j = 0.0; j < cantidad_o; ++j)
         {
@@ -83,7 +82,7 @@ void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_may
     }
 }
 
-void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, int total_celdas)
+void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, int total_celdas, int imprimir)
 {
     // Se abre el archivo de entrada.
     FILE *archivo_entrada = fopen(nombre_archivo_entrada, "r");
@@ -110,7 +109,10 @@ void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, 
     }
     fprintf(archivo_salida, "%d ", total_celdas - 1);
     fprintf(archivo_salida, "%f", energia_celdas[total_celdas - 1]);
-    imprimirGrafico(energia_celdas, total_celdas, celda_con_mayor_energia);
+    if (imprimir != 0)
+    {
+        imprimirGrafico(energia_celdas, total_celdas, celda_con_mayor_energia);
+    }
     // Se cierran los archivos.
     fclose(archivo_salida);
     fclose(archivo_entrada);
