@@ -12,8 +12,8 @@ SALIDA:  energia_depositada(double) - > energia que deposito la particula en la 
 DESCRIPCION: Funcion que calcula la energia depositada sobre una celda i del material
              por una particula.
 */
-double calculoEnergiaDepositada(int total_celdas, int celda_impactada,
-                                int posicion_celda_actual, int energia_potencial);
+double calculoEnergiaDepositada(float total_celdas, float celda_impactada,
+                                float posicion_celda_actual, float energia_potencial);
 
 /*
 ENTRADA: particulas(particulas *) -> arreglo de struct particulas que contiene todos los

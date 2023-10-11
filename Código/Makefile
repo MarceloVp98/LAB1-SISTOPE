@@ -7,7 +7,7 @@ EXEC=lab1
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+	$(CC) $(CFLAGS) $(OBJ) -o $@ -lm
 
 funciones.o: funciones.c $(DEPS)
 	$(CC) $(CFLAGS) -c $<

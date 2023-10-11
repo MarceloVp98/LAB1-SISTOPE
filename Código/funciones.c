@@ -1,7 +1,7 @@
 #include "funciones.h"
 
-double calculoEnergiaDepositada(int total_celdas, int celda_impactada,
-                                int posicion_celda_actual, int energia_potencial)
+double calculoEnergiaDepositada(float total_celdas, float celda_impactada,
+                                float posicion_celda_actual, float energia_potencial)
 {
     // Formula para calcular la energia de impacto.
     double energia_depositada = (pow(10.0, 3.0) * energia_potencial) /
