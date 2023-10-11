@@ -1,6 +1,7 @@
-#include "funciones.c"
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "funciones.h"
 
 int main(int argc, char *argv[])
 {
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    manejarArchivos(archivo_entrada, archivo_salida, 35, imprimir);
+    manejarArchivos(archivo_entrada, archivo_salida, total_celdas, imprimir);
 
     return 0;
 }

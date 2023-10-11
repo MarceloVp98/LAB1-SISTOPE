@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <math.h>
+#include <stdlib.h>
+#include "structParticula.c"
 
 /*
 ENTRADA: total_celdas(int) -> cantidad total de celdas del material.

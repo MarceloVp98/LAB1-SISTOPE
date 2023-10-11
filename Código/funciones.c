@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-typedef struct particula
-{
-    int posicion_impacto;
-    int energia;
-} particulas;
+#include "funciones.h"
 
 double calculoEnergiaDepositada(int total_celdas, int celda_impactada,
                                 int posicion_celda_actual, int energia_potencial)
@@ -73,6 +65,7 @@ void imprimirGrafico(double *energia_celdas, int total_celdas, int celda_con_may
     {
         printf("%d  %f |", i, energia_celdas[i]);
         // Se calcula la cantidad de O a imprimir segun la energia de la celda.
+        //Se divide en 2 para que no sean tantas.
         cantidad_o = ((energia_celdas[i] / mayor_energia) * 100) / 2;
         for (double j = 0.0; j < cantidad_o; ++j)
         {
@@ -109,6 +102,7 @@ void manejarArchivos(char *nombre_archivo_entrada, char *nombre_archivo_salida, 
     }
     fprintf(archivo_salida, "%d ", total_celdas - 1);
     fprintf(archivo_salida, "%f", energia_celdas[total_celdas - 1]);
+    //Se verifica si se desea imprimir por pantalla o no el grafico.
     if (imprimir != 0)
     {
         imprimirGrafico(energia_celdas, total_celdas, celda_con_mayor_energia);
